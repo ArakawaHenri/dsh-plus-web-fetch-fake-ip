@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Plus · Fake-IP Fetch",
+    "description": "Make web_fetch work with TUN fake-IP DNS while keeping the native address checks."
+  }
+}

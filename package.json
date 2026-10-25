@@ -1,0 +1,69 @@
+{
+  "name": "@dshplus/fake-ip",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "DSH Plus · Fake-IP Fetch: Make web_fetch work with TUN fake-IP DNS while keeping the native address checks.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArakawaHenri/dshplus-fake-ip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArakawaHenri/dshplus-fake-ip/issues"
+  },
+  "homepage": "https://github.com/ArakawaHenri/dshplus-fake-ip#readme",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "web-fetch",
+    "fake-ip",
+    "tun",
+    "clash",
+    "mihomo",
+    "ssrf"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./network": "./src/network.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "src/",
+    "locale/*.json",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "icon.svg"
+  ],
+  "scripts": {
+    "test": "node --import ./test/loader.mjs --test test/*.test.js",
+    "check": "node --check src/index.js && node --check src/network.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-web": ">=0.2.0-rc.1 <0.3.0",
+    "@deepseek-ai/dsh-web-fetch-http": ">=0.2.0-rc.1 <0.3.0",
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "icon": "./icon.svg"
+}

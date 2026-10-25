@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Plus · Fake-IP 抓取",
+    "description": "让 web_fetch 兼容 TUN fake-IP DNS，并保留原生地址校验。"
+  }
+}

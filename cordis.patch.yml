@@ -1,0 +1,10 @@
+- id: web-fetch-http
+  disabled: true
+
+- insert:
+    - id: dshplus-fake-ip
+      name: '@dshplus/fake-ip'
+      config:
+        mode: fake-ip
+        allowCidrs:
+          - 198.18.0.0/15
